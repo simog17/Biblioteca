@@ -14,6 +14,36 @@ namespace Library
 
         public int isbn { get; set; }
 
-        public enum genre {}
+        public enum genre {Comedy, Horror, Fantasy, RomanceNovel}
+
+        public bool booked { get { return false; } }
+
+        //Costruttore
+        public Book(string title, string author, int isbn, string genre)
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return isbn + " " + author;
+        }
+
+        public string Describe ()
+        {
+            return "Descrivo libro";
+        }
+
+        public bool IsBooked(User u)
+        {
+            if (booked)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
