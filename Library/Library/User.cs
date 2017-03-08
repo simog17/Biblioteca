@@ -16,12 +16,11 @@ namespace Library
 
         public DateTime dB { get; set; }
 
-
         public List<Book> ownBook = new List<Book>();
 
         public User(string name, string surname, string cf, int year, int month, int day)
         {
-            DateTime dateBirth = new DateTime(year, month, day);
+            DateTime dateBirth = new DateTime(year, month, day); // problema: ogni volta che istanzio un utente verrà istanziato un DateTime
             dB = dateBirth;
             this.name = name;
             this.surname = surname;
@@ -30,20 +29,17 @@ namespace Library
 
         public override string ToString()
         {
-            string output = name + surname + dB;
-            return output;
+            return name + surname + dB;
         }
 
         public string describe()
         {
-            string output = name + surname + cf + dB; // manca il numero dei libri
-            return output;
+            return name + " " + surname + " " + cf + " " + dB + "\r\n";
         }
 
-       /* public string describeBook()
+        public string describeBook(User u)
         {
-            string output = describe() + //libri che ha
-            return output;
-        }*/
+            return u.describe() + "Possiede: " + ownBook.Count + " libri\r\n";
+        }
     }
 }
