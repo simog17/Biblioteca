@@ -61,11 +61,14 @@ namespace Library
         {
             if (booked)
             {
+                MessageBox.Show("Il libro " + title + " dello/a scrittore/scrittrice " + author + " è gia in prestito.");
                 return false;
             }
             else
             {
+                MessageBox.Show("Prestito avvenuto con successo"); // Le messageBox sono temporanee, verranno sostituite con una scritta in una TextBox
                 _booked = true;
+                u.ownBook.Add(this);
                 return true;
             }
         }
