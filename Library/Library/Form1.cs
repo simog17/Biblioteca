@@ -19,7 +19,20 @@ namespace Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
+    
+        }
 
+        int index;
+        private void infoUserButton_Click(object sender, EventArgs e)
+        {
+            index = usersListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
+            txt.Text = Convert.ToString(usersListBox.Items[index]);
+        }
+
+        private void infoBookButton_Click(object sender, EventArgs e)
+        {
+            index = booksListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
+            txt.Text = Convert.ToString(booksListBox.Items[index]);
         }
     }
 }

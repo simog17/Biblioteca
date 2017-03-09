@@ -20,7 +20,7 @@ namespace Library
 
         public User(string name, string surname, string cf, int year, int month, int day)
         {
-            DateTime dateBirth = new DateTime(year, month, day); // problema: ogni volta che istanzio un utente verrà istanziato un DateTime
+            DateTime dateBirth = new DateTime(year, month, day); // problema: ogni volta che istanzio un user verrà istanziato un DateTime
             dB = dateBirth;
             this.name = name;
             this.surname = surname;
@@ -29,17 +29,17 @@ namespace Library
 
         public override string ToString()
         {
-            return name + surname + dB;
+            return name + " " + surname + " " + dB + "\r\n";
         }
 
-        public string describe()
+        public string Describe()
         {
-            return name + " " + surname + " " + cf + " " + dB + "\r\n";
+            return name + " " + surname + " " + cf + " " + dB.ToLongDateString() + "\r\n";
         }
 
-        public string describeBook(User u)
+        public string DescribeBook(User u)
         {
-            return u.describe() + "Possiede: " + ownBook.Count + " libri\r\n";
+            return u.Describe() + "Possiede: " + ownBook.Count + " libri\r\n";
         }
     }
 }

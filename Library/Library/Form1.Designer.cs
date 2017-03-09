@@ -28,20 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.usersListBox = new System.Windows.Forms.ListBox();
+            this.booksListBox = new System.Windows.Forms.ListBox();
+            this.infoUserButton = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.TextBox();
+            this.infoBookButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // usersListBox
+            // 
+            this.usersListBox.FormattingEnabled = true;
+            this.usersListBox.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.usersListBox.Location = new System.Drawing.Point(12, 12);
+            this.usersListBox.Name = "usersListBox";
+            this.usersListBox.Size = new System.Drawing.Size(210, 277);
+            this.usersListBox.TabIndex = 0;
+            // 
+            // booksListBox
+            // 
+            this.booksListBox.FormattingEnabled = true;
+            this.booksListBox.Location = new System.Drawing.Point(347, 12);
+            this.booksListBox.Name = "booksListBox";
+            this.booksListBox.Size = new System.Drawing.Size(210, 277);
+            this.booksListBox.TabIndex = 1;
+            // 
+            // infoUserButton
+            // 
+            this.infoUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoUserButton.Location = new System.Drawing.Point(12, 313);
+            this.infoUserButton.Name = "infoUserButton";
+            this.infoUserButton.Size = new System.Drawing.Size(113, 52);
+            this.infoUserButton.TabIndex = 2;
+            this.infoUserButton.Text = "Info utente";
+            this.infoUserButton.UseVisualStyleBackColor = true;
+            this.infoUserButton.Click += new System.EventHandler(this.infoUserButton_Click);
+            // 
+            // txt
+            // 
+            this.txt.BackColor = System.Drawing.Color.White;
+            this.txt.Location = new System.Drawing.Point(72, 394);
+            this.txt.Multiline = true;
+            this.txt.Name = "txt";
+            this.txt.ReadOnly = true;
+            this.txt.Size = new System.Drawing.Size(433, 103);
+            this.txt.TabIndex = 3;
+            // 
+            // infoBookButton
+            // 
+            this.infoBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoBookButton.Location = new System.Drawing.Point(444, 313);
+            this.infoBookButton.Name = "infoBookButton";
+            this.infoBookButton.Size = new System.Drawing.Size(113, 52);
+            this.infoBookButton.TabIndex = 4;
+            this.infoBookButton.Text = "Info libro";
+            this.infoBookButton.UseVisualStyleBackColor = true;
+            this.infoBookButton.Click += new System.EventHandler(this.infoBookButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(569, 509);
+            this.Controls.Add(this.infoBookButton);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.infoUserButton);
+            this.Controls.Add(this.booksListBox);
+            this.Controls.Add(this.usersListBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox usersListBox;
+        private System.Windows.Forms.ListBox booksListBox;
+        private System.Windows.Forms.Button infoUserButton;
+        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.Button infoBookButton;
     }
 }
 
