@@ -13,7 +13,7 @@ namespace Library
 
         public string author { get; set; }
 
-        public int isbn { get; set; }
+        public string isbn { get; set; }
 
         private bool _booked;
         public bool booked { get { return _booked; } }
@@ -21,7 +21,7 @@ namespace Library
         public string genre { get; set; }
 
         //Costruttore
-        public Book(string title, string author, int isbn, string genre)
+        public Book(string title, string author, string isbn, string genre)
         {
             this.title = title;
             this.author = author;
