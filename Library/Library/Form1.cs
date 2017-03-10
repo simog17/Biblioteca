@@ -19,14 +19,17 @@ namespace Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            usersListBox.Items.Add(Seeder.GenerateUser());
+            for (int i = 0; i < 5; i++)
+            {
+                usersListBox.Items.Add(Seeder.GenerateUser());
+            }    
         }
 
         int index;
         private void infoUserButton_Click(object sender, EventArgs e)
         {
             index = usersListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
-            txt.Text = Convert.ToString(usersListBox.Items[index]);
+            txt.Text = Convert.ToString(usersListBox.Items[index].ToString());
         }
 
         private void infoBookButton_Click(object sender, EventArgs e)

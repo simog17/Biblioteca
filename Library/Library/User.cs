@@ -28,7 +28,7 @@ namespace Library
 
         public override string ToString()
         {
-            return name + " " + surname + " " + dB + "\r\n";
+            return name + " " + surname + " " + dB.ToLongDateString() + "\r\n";
         }
 
         public string Describe()
