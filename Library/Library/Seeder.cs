@@ -9,7 +9,7 @@ namespace Library
     static class Seeder
     {
         private static string[] name = { "simone", "Nicola", "Pietro", "Gianni", "Pippo" };
-        private static string[] surname = { "rossi", "verdi", "gialli", "galli" };
+        private static string[] surname = { "rossi", "verdi", "gialli", "galli", "neri"};
         private static string[] cf = { "FDMZST83M03Z320Q","FDMZST83M03Z320Q","XGJKDE87C29D582A", "BFRPFC80H13L640O", "PRLRVC36T21L675Y" };
         private static DateTime[] db = new DateTime[]
         {
@@ -20,6 +20,20 @@ namespace Library
             new DateTime(2004,03,23),
         };
 
-
+        private static Random rnd = new Random();
+        public static User GenerateUser()
+        {
+            int count;
+            for (int i = 0; i < 5; i++)
+            {
+                count = rnd.Next(0, 5);  // Può capitare stesso nome e cognome, da riguardare
+                GenerateUser().name = name[count];
+                GenerateUser().surname = surname[count];
+                GenerateUser().cf = cf[count];
+                GenerateUser().dB = db[count];
+            }
+            return GenerateUser();
+        }
     }
+
 }

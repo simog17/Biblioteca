@@ -19,7 +19,7 @@ namespace Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
-    
+            usersListBox.Items.Add(Seeder.GenerateUser());
         }
 
         int index;
