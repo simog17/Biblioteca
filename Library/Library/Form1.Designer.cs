@@ -33,6 +33,7 @@
             this.infoUserButton = new System.Windows.Forms.Button();
             this.txt = new System.Windows.Forms.TextBox();
             this.infoBookButton = new System.Windows.Forms.Button();
+            this.bookedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usersListBox
@@ -84,11 +85,22 @@
             this.infoBookButton.UseVisualStyleBackColor = true;
             this.infoBookButton.Click += new System.EventHandler(this.infoBookButton_Click);
             // 
+            // bookedButton
+            // 
+            this.bookedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookedButton.Location = new System.Drawing.Point(228, 315);
+            this.bookedButton.Name = "bookedButton";
+            this.bookedButton.Size = new System.Drawing.Size(113, 52);
+            this.bookedButton.TabIndex = 5;
+            this.bookedButton.Text = "Prestare";
+            this.bookedButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 509);
+            this.Controls.Add(this.bookedButton);
             this.Controls.Add(this.infoBookButton);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.infoUserButton);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button infoUserButton;
         private System.Windows.Forms.TextBox txt;
         private System.Windows.Forms.Button infoBookButton;
+        private System.Windows.Forms.Button bookedButton;
     }
 }
 

@@ -18,9 +18,8 @@ namespace Library
 
         public List<Book> ownBook = new List<Book>();
 
-        public User(string name, string surname, string cf, int year, int month, int day)
+        public User(string name, string surname, string cf, DateTime dateBirth) // istanzia da form
         {
-            DateTime dateBirth = new DateTime(year, month, day); // problema: ogni volta che istanzio un user verrà istanziato un DateTime
             dB = dateBirth;
             this.name = name;
             this.surname = surname;
