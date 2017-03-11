@@ -42,15 +42,15 @@
             this.usersListBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.usersListBox.Location = new System.Drawing.Point(12, 12);
             this.usersListBox.Name = "usersListBox";
-            this.usersListBox.Size = new System.Drawing.Size(210, 277);
+            this.usersListBox.Size = new System.Drawing.Size(228, 277);
             this.usersListBox.TabIndex = 0;
             // 
             // booksListBox
             // 
             this.booksListBox.FormattingEnabled = true;
-            this.booksListBox.Location = new System.Drawing.Point(347, 12);
+            this.booksListBox.Location = new System.Drawing.Point(329, 12);
             this.booksListBox.Name = "booksListBox";
-            this.booksListBox.Size = new System.Drawing.Size(210, 277);
+            this.booksListBox.Size = new System.Drawing.Size(228, 277);
             this.booksListBox.TabIndex = 1;
             // 
             // infoUserButton

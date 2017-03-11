@@ -19,10 +19,15 @@ namespace Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i <= 4; i++)
             {
                 usersListBox.Items.Add(Seeder.GenerateUser());
-            }    
+            }
+            for (int i = 0; i <= 5; i++)
+            {
+                booksListBox.Items.Add(Seeder.GenerateBook());
+            }
+            
         }
 
         int index;
@@ -35,7 +40,7 @@ namespace Library
         private void infoBookButton_Click(object sender, EventArgs e)
         {
             index = booksListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
-            txt.Text = Convert.ToString(booksListBox.Items[index]);
+            txt.Text = Convert.ToString(booksListBox.Items[index].ToString());
         }
     }
 }

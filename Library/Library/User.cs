@@ -26,14 +26,14 @@ namespace Library
             this.cf = cf;
         }
 
-        public override string ToString()
-        {
-            return name + " " + surname + " " + dB.ToLongDateString() + "\r\n";
-        }
-
         public string Describe()
         {
-            return name + " " + surname + " " + cf + " " + dB.ToLongDateString() + "\r\n";
+            return name + " " + surname + " " + cf + " " + dB.ToShortDateString() + "\r\n";
+        }
+
+        public override string ToString()
+        {
+            return name + " " + surname + " " + dB.ToShortDateString() + "\r\n";
         }
 
         public string DescribeBook(User u)

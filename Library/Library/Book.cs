@@ -31,16 +31,16 @@ namespace Library
 
         public override string ToString()
         {
-            return isbn + " " + author + "\r\n";
+            return title + ", " + author + ", " + " " + genre + "\r\n";
         }
 
         public string Describe()
         {
-            return "Titolo libro:" + title + "\r\n" + "Autore: " + author + "\r\n" + "Genere: " + genre + "\r\n";
+            return title + " " +  author + "\r\n";
         }
 
-        // Se il libro è già stato prestato allora verrà impedito il prestito
-        // altrimenti esso verrà dato in prestito all'utente 
+        /* Se il libro è già stato prestato allora verrà impedito il prestito
+           altrimenti esso verrà dato in prestito all'utente */
         public bool ToBook(User u, TextBox t)
         {
             if (booked)
