@@ -17,73 +17,34 @@ namespace Library
         //Crea una data pseudo random
         private static DateTime SetDB()
         {
-            return new DateTime(rnd.Next(1950, 2017), rnd.Next(1, 13), rnd.Next(1, 30));
+            return new DateTime(rnd.Next(1950, 2017), rnd.Next(1, 12), rnd.Next(1, 30));
         }
 
-        //Setta un nome a caso dall'array
-        private static string SelectName()
+        //Setta elementi dell'istanza
+        private static string Select(ref string[] data, int count)
         {
-            int index = rnd.Next(0,5);
-            string n = "";
-            while (n == "")
+            int index = rnd.Next(count);
+            string temp = "";
+            while (temp == "")
             {
-                if (names[index] != "")
+                if (data[index] != "")
                 {
-                    n = names[index];
-                    names[index] = "";
+                    temp = data[index];
+                    data[index] = "";
                 }
                 else
                 {
-                    index = rnd.Next(5);
+                    index = rnd.Next(count);
                 }  
             }
-            return n;
-        }
-
-        //Setta un cognome a caso dall'array
-        private static string SelectSurname()
-        {
-            int index = rnd.Next(5);
-            string s = "";
-            while (s == "")
-            {
-                if (surnames[index] != "")
-                {
-                    s = surnames[index];
-                    surnames[index] = "";
-                }
-                else
-                {
-                    index = rnd.Next(5);
-                }
-            }
-            return s;
-        }
-
-        //Setta un codice fiscale a caso dall'array
-        private static string SelectCf()
-        {
-            int index = rnd.Next(5);
-            string c = "";
-            while (c == "")
-            {
-                if (cf[index] != "")
-                {
-                    c = cf[index];
-                    cf[index] = "";
-                }
-                else
-                {
-                    index = rnd.Next(5);
-                }
-            }
-            return c;
+            return temp;
         }
 
         //Genera un utente
         public static User GenerateUser()
         {
-            return new User(SelectName(), SelectSurname(), SelectCf(), SetDB()); // le date possono anche ripetersi
+            ;
+            return new User(Select(ref names, 5), Select(ref surnames, 5), Select(ref cf, 5), SetDB());
         }
 
         private static string[] titles = { "Memorie di Adriano", "Il conte di Montecristo", "Il Gattopardo", "1984", "Cime tempestose", "I fratelli Karamazov" };
@@ -101,71 +62,10 @@ namespace Library
             return isbn;
         } 
 
-        //Setta un titolo a caso dall'array
-        private static string SelectTitle()
-        {
-            int index = rnd.Next(6);
-            string t = "";
-            while (t == "")
-            {
-                if (titles[index] != "")
-                {
-                    t = titles[index];
-                    titles[index] = "";
-                }
-                else
-                {
-
-                    index = rnd.Next(6);
-                }
-            }
-            return t;
-        }
-
-        //Setta un autore a caso dall'array
-        private static string SelectAuthor()
-        {
-            int index = rnd.Next(6);
-            string a = "";
-            while (a == "")
-            {
-                if (authors[index] != "")
-                {
-                    a = authors[index];
-                    authors[index] = "";
-                }
-                else
-                {
-                    index = rnd.Next(6);
-                }
-            }
-            return a;
-        }
-
-        //Setta un genere a caso dall'array
-        private static string SelectGenre()
-        {
-            int index = rnd.Next(6);
-            string g = "";
-            while (g == "")
-            {
-                if (genres[index] != "")
-                {
-                    g = genres[index];
-                    genres[index] = "";
-                }
-                else
-                {
-                    index = rnd.Next(6);
-                }
-            }
-            return g;
-        }
-
         //Genera un libro
         public static Book GenerateBook()
         {
-            return new Book(SelectTitle(), SelectAuthor(), SetIsbns(), SelectGenre());
+            return new Book(Select(ref titles, 6), Select(ref authors, 6), SetIsbns(), Select(ref genres, 6));
         }
     }
 
