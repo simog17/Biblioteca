@@ -17,28 +17,39 @@ namespace Library
         public DateTime dB { get; set; }
 
         public List<Book> ownBook = new List<Book>();
-
-        public User(string name, string surname, string cf, DateTime dateBirth) // istanzia da form
+         
+        //Costruttore
+        public User(string name, string surname, string cf, DateTime dateBirth)
         {
-            dB = dateBirth;
             this.name = name;
             this.surname = surname;
             this.cf = cf;
+            dB = dateBirth;
         }
 
-        public string Describe()
+        //Usato per scrivere l'utente nella ListBox
+        public override string ToString() 
         {
-            return name + " " + surname + " " + cf + " " + dB.ToShortDateString() + "\r\n";
+            return name + " " + surname + "\r\n";
         }
 
-        public override string ToString()
+        //Usato per descrivere utente nella textBox
+        public string Describe() 
         {
-            return name + " " + surname + " " + dB.ToShortDateString() + "\r\n";
+            return "Nome: " + name + "\r\n" + "Cognome: " + surname + "\r\n" + "Codice fiscale: " + cf + "\r\n" + "Data di nascita: " + dB.ToShortDateString() + "\r\n";
         }
 
-        public string DescribeBook(User u)
+        public string DescribeBook()
         {
-            return u.Describe() + "Possiede: " + ownBook.Count + " libri\r\n";
+            int count = ownBook.Count;
+            if (count < 2)
+            {
+                return Describe() + name + " ora ha " + count + " libro in prestito";  //Cambia solo la vocale del singolare/plurale di libro/i
+            }
+            else
+            {
+                return Describe() + name + " ora ha " + count + " libri in prestito";  //Cambia solo la vocale del singolare/plurale di libro/i
+            }
         }
     }
 }

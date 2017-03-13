@@ -38,27 +38,31 @@
             // 
             // usersListBox
             // 
+            this.usersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersListBox.FormattingEnabled = true;
             this.usersListBox.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.usersListBox.ItemHeight = 20;
             this.usersListBox.Location = new System.Drawing.Point(12, 12);
             this.usersListBox.Name = "usersListBox";
-            this.usersListBox.Size = new System.Drawing.Size(228, 277);
+            this.usersListBox.Size = new System.Drawing.Size(228, 264);
             this.usersListBox.TabIndex = 0;
             // 
             // booksListBox
             // 
+            this.booksListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksListBox.FormattingEnabled = true;
-            this.booksListBox.Location = new System.Drawing.Point(329, 12);
+            this.booksListBox.ItemHeight = 20;
+            this.booksListBox.Location = new System.Drawing.Point(276, 12);
             this.booksListBox.Name = "booksListBox";
-            this.booksListBox.Size = new System.Drawing.Size(228, 277);
+            this.booksListBox.Size = new System.Drawing.Size(228, 264);
             this.booksListBox.TabIndex = 1;
             // 
             // infoUserButton
             // 
             this.infoUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoUserButton.Location = new System.Drawing.Point(12, 313);
+            this.infoUserButton.Location = new System.Drawing.Point(12, 302);
             this.infoUserButton.Name = "infoUserButton";
-            this.infoUserButton.Size = new System.Drawing.Size(113, 52);
+            this.infoUserButton.Size = new System.Drawing.Size(137, 67);
             this.infoUserButton.TabIndex = 2;
             this.infoUserButton.Text = "Info utente";
             this.infoUserButton.UseVisualStyleBackColor = true;
@@ -67,19 +71,21 @@
             // txt
             // 
             this.txt.BackColor = System.Drawing.Color.White;
-            this.txt.Location = new System.Drawing.Point(72, 394);
+            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt.Location = new System.Drawing.Point(12, 400);
             this.txt.Multiline = true;
             this.txt.Name = "txt";
             this.txt.ReadOnly = true;
-            this.txt.Size = new System.Drawing.Size(433, 103);
+            this.txt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt.Size = new System.Drawing.Size(492, 237);
             this.txt.TabIndex = 3;
             // 
             // infoBookButton
             // 
             this.infoBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoBookButton.Location = new System.Drawing.Point(444, 313);
+            this.infoBookButton.Location = new System.Drawing.Point(367, 302);
             this.infoBookButton.Name = "infoBookButton";
-            this.infoBookButton.Size = new System.Drawing.Size(113, 52);
+            this.infoBookButton.Size = new System.Drawing.Size(137, 67);
             this.infoBookButton.TabIndex = 4;
             this.infoBookButton.Text = "Info libro";
             this.infoBookButton.UseVisualStyleBackColor = true;
@@ -88,18 +94,19 @@
             // bookedButton
             // 
             this.bookedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookedButton.Location = new System.Drawing.Point(228, 315);
+            this.bookedButton.Location = new System.Drawing.Point(189, 302);
             this.bookedButton.Name = "bookedButton";
-            this.bookedButton.Size = new System.Drawing.Size(113, 52);
+            this.bookedButton.Size = new System.Drawing.Size(137, 67);
             this.bookedButton.TabIndex = 5;
             this.bookedButton.Text = "Prestare";
             this.bookedButton.UseVisualStyleBackColor = true;
+            this.bookedButton.Click += new System.EventHandler(this.bookedButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 509);
+            this.ClientSize = new System.Drawing.Size(516, 649);
             this.Controls.Add(this.bookedButton);
             this.Controls.Add(this.infoBookButton);
             this.Controls.Add(this.txt);
@@ -107,7 +114,7 @@
             this.Controls.Add(this.booksListBox);
             this.Controls.Add(this.usersListBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Biblioteca";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

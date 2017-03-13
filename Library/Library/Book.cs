@@ -29,14 +29,16 @@ namespace Library
             this.genre = genre;
         }
 
-        public override string ToString()
+        //Usato per scrivere il titolo del libro nella listBox
+        public override string ToString() 
         {
-            return title + ", " + author + ", " + " " + genre + "\r\n";
+            return title;
         }
 
-        public string Describe()
+        //Usato per descrivere il libro nella textBox
+        public string Describe() 
         {
-            return title + " " +  author + "\r\n";
+            return "Titolo: " + title + "\r\n" + "Autore: " +  author + "\r\n" + "Genere: " +  genre + "\r\n";
         }
 
         /* Se il libro è già stato prestato allora verrà impedito il prestito
@@ -45,16 +47,16 @@ namespace Library
         {
             if (booked)
             {
-                t.Text = this.Describe() + "\r\n" + "E' gia in prestito.";
+                t.Text = this.Describe() + "\r\n" + "Il libro selezionato è già in prestito. ";
                 return false;
             }
             else
             {
-                t.Text = this.Describe() +"\r\n";
-                t.Text += "Utente: " + u.Describe();
-                t.Text += "Il prestito è avvenuto con successo";
                 _booked = true;
                 u.ownBook.Add(this);
+                t.Text = this.Describe() +"\r\n";
+                t.Text += "Il prestito è avvenuto con successo\r\n";
+                t.Text += u.DescribeBook();
                 return true;
             }
         }
