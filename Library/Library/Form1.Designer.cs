@@ -44,6 +44,7 @@
             this.usersListBox.ItemHeight = 20;
             this.usersListBox.Location = new System.Drawing.Point(12, 12);
             this.usersListBox.Name = "usersListBox";
+            this.usersListBox.ScrollAlwaysVisible = true;
             this.usersListBox.Size = new System.Drawing.Size(228, 264);
             this.usersListBox.TabIndex = 0;
             // 
@@ -54,6 +55,7 @@
             this.booksListBox.ItemHeight = 20;
             this.booksListBox.Location = new System.Drawing.Point(276, 12);
             this.booksListBox.Name = "booksListBox";
+            this.booksListBox.ScrollAlwaysVisible = true;
             this.booksListBox.Size = new System.Drawing.Size(228, 264);
             this.booksListBox.TabIndex = 1;
             // 
