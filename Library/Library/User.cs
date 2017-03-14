@@ -30,13 +30,13 @@ namespace Library
         //Usato per scrivere l'utente nella ListBox
         public override string ToString() 
         {
-            return name + " " + surname + "\r\n";
+            return name + " " + surname + Environment.NewLine;
         }
 
         //Usato per descrivere utente nella textBox
         public string Describe() 
         {
-            return "Nome: " + name + "\r\n" + "Cognome: " + surname + "\r\n" + "Codice fiscale: " + cf + "\r\n" + "Data di nascita: " + dB.ToShortDateString() + "\r\n";
+            return "Nome: " + name + Environment.NewLine + "Cognome: " + surname + Environment.NewLine + "Codice fiscale: " + cf + Environment.NewLine + "Data di nascita: " + dB.ToShortDateString() + Environment.NewLine;
         }
 
         public string DescribeBook()

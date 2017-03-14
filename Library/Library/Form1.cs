@@ -77,5 +77,10 @@ namespace Library
             }
 
         }
+
+        private void usersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
