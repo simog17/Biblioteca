@@ -41,7 +41,7 @@ namespace Library
             index = usersListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
             try      //gestico il caso in cui venga cliccato il bottone senza prima aver selezionato un utente
             {
-                txt.Text = Convert.ToString(users[index].Describe());
+                txt.Text = Convert.ToString(users[index].DescribeBook());
             }
             catch
             {
