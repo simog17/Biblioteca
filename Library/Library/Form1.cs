@@ -36,7 +36,7 @@ namespace Library
             int index;
             index = usersListBox.SelectedIndex;  // indice dell'elemento selezionato nella listBox
             User u = (User)usersListBox.Items[index];
-            txt.Text = u.Describe();
+            txt.Text = u.DescribeBook();
         }
 
         private void infoBookButton_Click(object sender, EventArgs e)

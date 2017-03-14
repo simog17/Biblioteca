@@ -42,9 +42,9 @@ namespace Library
         int j = 0;
         public string DescribeBook()
         {
-            j++;
+            j++; // ho cambiato j con count nel for così non mi cambia le scritte se premo 2 volte info utente e non ha nessun libro
             int count = ownBook.Count;
-            if (j > 1)
+            if (count >= 1)
             {
                 string output = name + " ha i seguenti libri: ";
                 for (int i = 0; i < count; i++)
@@ -53,13 +53,13 @@ namespace Library
                 }
                 return Describe() + output;
             }
-            if (count == 1)
+            /*if (count == 1)
             {
                 return Describe() + name + " ora ha " + count + " libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
-            }
+            }*/
             else
             {
-                return Describe() + name + " ora ha " + count + " libri in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
+                return Describe() + name + " non ha ancora nessun libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
             }       
         }
     }
