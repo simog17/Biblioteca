@@ -47,6 +47,7 @@
             this.usersListBox.ScrollAlwaysVisible = true;
             this.usersListBox.Size = new System.Drawing.Size(228, 264);
             this.usersListBox.TabIndex = 0;
+            this.usersListBox.SelectedIndexChanged += new System.EventHandler(this.usersListBox_SelectedIndexChanged);
             // 
             // booksListBox
             // 

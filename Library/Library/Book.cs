@@ -38,7 +38,7 @@ namespace Library
         //Usato per descrivere il libro nella textBox
         public string Describe() 
         {
-            return "Titolo: " + title + "\r\n" + "Autore: " +  author + "\r\n" + "Genere: " +  genre + "\r\n";
+            return "Titolo: " + title + Environment.NewLine + "Autore: " +  author + Environment.NewLine + "Genere: " +  genre + Environment.NewLine;
         }
 
         /* Se il libro è già stato prestato allora verrà impedito il prestito
@@ -47,15 +47,15 @@ namespace Library
         {
             if (booked)
             {
-                t.Text = this.Describe() + "\r\n" + "Il libro selezionato è già in prestito. ";
+                t.Text = this.Describe() + Environment.NewLine + "Il libro selezionato è già in prestito. ";
                 return false;
             }
             else
             {
                 _booked = true;
                 u.ownBook.Add(this);
-                t.Text = this.Describe() +"\r\n";
-                t.Text += "Il prestito è avvenuto con successo\r\n";
+                t.Text = this.Describe() + Environment.NewLine;
+                t.Text += "Il prestito è avvenuto con successo" + Environment.NewLine;
                 t.Text += u.DescribeBook();
                 return true;
             }
