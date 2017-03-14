@@ -39,17 +39,28 @@ namespace Library
             return "Nome: " + name + "\r\n" + "Cognome: " + surname + "\r\n" + "Codice fiscale: " + cf + "\r\n" + "Data di nascita: " + dB.ToShortDateString() + "\r\n";
         }
 
+        int j = 0;
         public string DescribeBook()
         {
+            j++;
             int count = ownBook.Count;
-            if (count < 2)
+            if (j > 1)
             {
-                return Describe() + name + " ora ha " + count + " libro in prestito";  //Cambia solo la vocale del singolare/plurale di libro/i
+                string output = name + " ha i seguenti libri: ";
+                for (int i = 0; i < count; i++)
+                {
+                    output += ownBook[i] + " ";
+                }
+                return Describe() + output;
+            }
+            if (count == 1)
+            {
+                return Describe() + name + " ora ha " + count + " libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
             }
             else
             {
-                return Describe() + name + " ora ha " + count + " libri in prestito";  //Cambia solo la vocale del singolare/plurale di libro/i
-            }
+                return Describe() + name + " ora ha " + count + " libri in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
+            }       
         }
     }
 }
