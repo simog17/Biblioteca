@@ -46,6 +46,7 @@
             this.usersListBox.Name = "usersListBox";
             this.usersListBox.ScrollAlwaysVisible = true;
             this.usersListBox.Size = new System.Drawing.Size(228, 264);
+            this.usersListBox.Sorted = true;
             this.usersListBox.TabIndex = 0;
             // 
             // booksListBox
@@ -57,6 +58,7 @@
             this.booksListBox.Name = "booksListBox";
             this.booksListBox.ScrollAlwaysVisible = true;
             this.booksListBox.Size = new System.Drawing.Size(228, 264);
+            this.booksListBox.Sorted = true;
             this.booksListBox.TabIndex = 1;
             // 
             // infoUserButton

@@ -14,7 +14,7 @@ namespace Library
 
         public string cf { get; set; }
 
-        public DateTime dB { get; set; }
+        public DateTime dateBirth { get; set; }
 
         public List<Book> ownBook = new List<Book>();
          
@@ -24,19 +24,19 @@ namespace Library
             this.name = name;
             this.surname = surname;
             this.cf = cf;
-            dB = dateBirth;
+            this.dateBirth = dateBirth;
         }
 
         //Usato per scrivere l'utente nella ListBox
         public override string ToString() 
         {
-            return name + " " + surname + Environment.NewLine;
+            return surname + " " + name + Environment.NewLine;
         }
 
         //Usato per descrivere utente nella textBox
         public string Describe() 
         {
-            return "Nome: " + name + Environment.NewLine + "Cognome: " + surname + Environment.NewLine + "Codice fiscale: " + cf + Environment.NewLine + "Data di nascita: " + dB.ToShortDateString() + Environment.NewLine;
+            return "Nome: " + name + Environment.NewLine + "Cognome: " + surname + Environment.NewLine + "Codice fiscale: " + cf + Environment.NewLine + "Data di nascita: " + dateBirth.ToShortDateString() + Environment.NewLine;
         }
 
         public string DescribeBook()
@@ -47,7 +47,7 @@ namespace Library
                 string output = name + " ha i seguenti libri: ";
                 for (int i = 0; i < count; i++)
                 {
-                    if (i == count - 1)  //Serve solo per la visualizzazione del dato
+                    if (i == count - 1)  //Serve solo per la visualizzazione output
                     {
                         output += ownBook[i] + Environment.NewLine;
                     }
