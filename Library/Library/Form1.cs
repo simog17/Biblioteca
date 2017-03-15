@@ -55,10 +55,5 @@ namespace Library
             Book b = (Book)booksListBox.Items[bookIndex];
             b.ToBook(u, txt);
         }
-
-        private void usersListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

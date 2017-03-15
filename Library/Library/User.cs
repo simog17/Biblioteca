@@ -39,27 +39,28 @@ namespace Library
             return "Nome: " + name + Environment.NewLine + "Cognome: " + surname + Environment.NewLine + "Codice fiscale: " + cf + Environment.NewLine + "Data di nascita: " + dB.ToShortDateString() + Environment.NewLine;
         }
 
-        int j = 0;
         public string DescribeBook()
         {
-            j++; // ho cambiato j con count nel for così non mi cambia le scritte se premo 2 volte info utente e non ha nessun libro
             int count = ownBook.Count;
             if (count >= 1)
             {
                 string output = name + " ha i seguenti libri: ";
                 for (int i = 0; i < count; i++)
                 {
-                    output += ownBook[i] + " ";
+                    if (i == count - 1)  //Serve solo per la visualizzazione del dato
+                    {
+                        output += ownBook[i] + Environment.NewLine;
+                    }
+                    else
+                    {
+                        output += ownBook[i] + ", ";
+                    }
                 }
-                return Describe() + output;
+                return this.Describe() + output;
             }
-            /*if (count == 1)
-            {
-                return Describe() + name + " ora ha " + count + " libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
-            }*/
             else
             {
-                return Describe() + name + " non ha ancora nessun libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
+                return this.Describe() + name + " non ha ancora nessun libro in prestito" + Environment.NewLine;  //Cambia solo la vocale del singolare/plurale di libro/i
             }       
         }
     }

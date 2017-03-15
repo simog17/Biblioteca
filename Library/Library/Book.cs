@@ -47,7 +47,9 @@ namespace Library
         {
             if (booked)
             {
-                t.Text = this.Describe() + Environment.NewLine + "Il libro selezionato è già in prestito. ";
+                t.Text = this.Describe() + Environment.NewLine;
+                t.Text += "Impossibile effettuare l'operazione." + Environment.NewLine;
+                t.Text += "Il libro selezionato è già in prestito.";
                 return false;
             }
             else
