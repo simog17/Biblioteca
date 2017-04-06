@@ -38,7 +38,7 @@ namespace Library
         //Usato per descrivere il libro nella textBox
         public string Describe() 
         {
-            return "Titolo: " + title + Environment.NewLine + "Autore: " +  author + Environment.NewLine + "Genere: " +  genre + Environment.NewLine;
+            return "Titolo: " + title + Environment.NewLine + "Autore: " +  author + Environment.NewLine + "Genere: " +  genre + Environment.NewLine + "Codice isbn: " + isbn + Environment.NewLine;
         }
 
         /* Se il libro è già stato prestato allora verrà impedito il prestito
