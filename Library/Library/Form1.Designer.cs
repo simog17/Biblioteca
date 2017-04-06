@@ -117,6 +117,8 @@
             this.Controls.Add(this.infoUserButton);
             this.Controls.Add(this.booksListBox);
             this.Controls.Add(this.usersListBox);
+            this.MaximumSize = new System.Drawing.Size(532, 687);
+            this.MinimumSize = new System.Drawing.Size(532, 687);
             this.Name = "Form1";
             this.Text = "Biblioteca";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -21,7 +21,7 @@ namespace Library
         public string genre { get; set; }
 
         //Costruttore
-        public Book(string title, string author, string isbn, string genre)
+        public Book(string title, string author, string genre, string isbn)
         {
             this.title = title;
             this.author = author;
